@@ -1,0 +1,5 @@
+{
+  "poll_interval": 5,
+  "docker_socket": "/var/run/docker.sock",
+  "enable_alerts": true
+}

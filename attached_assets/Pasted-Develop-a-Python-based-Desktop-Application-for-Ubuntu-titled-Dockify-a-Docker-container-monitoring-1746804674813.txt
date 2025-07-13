@@ -1,0 +1,112 @@
+Develop a Python-based Desktop Application for Ubuntu titled Dockify — a Docker container monitoring system inspired by Spotify's UI/UX, tailored for a university diploma project.
+1. Core Objectives
+
+    Academic Focus: Prioritize clarity, maintainability, and educational value over commercialization.
+
+    Spotify-Inspired Design:
+
+        Dark theme with vibrant accents, gradient overlays, and modern sans-serif typography.
+
+        Left sidebar navigation (icons: Overview, Containers, Metrics, Reports, Code).
+
+        Smooth animations for data updates (e.g., pulsing CPU% on alerts).
+
+    Ubuntu Compatibility:
+
+        Native window controls (minimize/maximize/close).
+
+        No Snap packaging — deliver as a standalone .deb or executable.
+
+2. Functional Requirements
+A. Essential Features
+Feature	Details
+Real-Time Monitoring	- Auto-refresh every 5 sec via Docker API.
+	- Metrics: CPU%, RAM usage (absolute + %), container status.
+Container Control	- Start/Stop/Restart/Delete containers via buttons.
+Alerts	- Customizable thresholds (CPU/RAM) with in-app notifications.
+Code Explorer	- File tree navigation + syntax-highlighted code viewer (read-only).
+Reports	- Export daily metrics to Excel with basic graphs (Plotly).
+B. Academic Extensions
+
+    Comparative Analysis: Include a section in documentation comparing your system’s performance/resource usage with Portainer.
+
+    Modular Design: Highlight decoupled components (UI, logic, data) in the thesis.
+
+3. Technical Guidelines
+A. Recommended Stack
+Component	Technology	Rationale
+GUI Framework	CustomTkinter	Lightweight, modern themes, Python-native.
+Docker API	docker-py	Official library, full Docker support.
+Metrics	psutil	Low-level system monitoring.
+Syntax Highlight	Pygments	Academic standard for code visualization.
+Packaging	dh-virtualenv	Simple Ubuntu-compatible .deb creation.
+B. Dependency List
+python
+
+# requirements.txt  
+customtkinter ==5.2.0  
+docker ==6.1.3  
+psutil ==5.9.5  
+pandas ==2.0.3  
+plotly ==5.15.0  
+Pygments ==2.15.1  
+
+Compatibility: All packages support Python 3.10+ and Ubuntu 22.04.
+C. Project Structure (Recommendation)
+
+dockify/  
+├── core/                  # Business logic  
+│   ├── monitor.py         # Metrics collection  
+│   └── alerts.py          # Threshold checks  
+├── ui/                    # CustomTkinter screens  
+│   ├── overview.py        # Dashboard  
+│   └── code_viewer.py     # File explorer  
+├── utils/                 # Helpers  
+│   ├── exporters.py       # Excel/PDF reports  
+│   └── theme.py           # Spotify-style CSS  
+└── docs/                  # Thesis documentation  
+
+Note: Agent may adjust structure for efficiency.
+4. Validation Rules
+
+    Avoid Overengineering:
+
+        No Kubernetes, ML, or real-time log streaming.
+
+        Use simple thresholds (no predictive algorithms).
+
+    Performance Limits:
+
+        RAM usage <500 MB with 10+ containers.
+
+        CPU overhead <10% during idle.
+
+5. Deliverables
+
+    Application:
+
+        Installable via .deb or Python script (main.py).
+
+    Documentation:
+
+        Technical report (PDF) explaining design choices.
+
+        User guide for professors/testing committee.
+
+    Thesis-Ready Features:
+
+        Code structure diagrams.
+
+        Performance benchmarks vs. Portainer.
+
+6. Key Academic Extensions
+
+    Thesis Chapter:
+
+        Explain how Spotify’s UI principles improve sysadmin workflows.
+
+        Analyze trade-offs between CustomTkinter and web-based tools.
+
+    Code Quality:
+
+        Include docstrings, type hints, and PEP8 compliance.
