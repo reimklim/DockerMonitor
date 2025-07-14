@@ -22,8 +22,8 @@ ReimDockify - это приложение для мониторинга конт
 1. Клонируйте репозиторий:
 
 ```bash
-git clone https://github.com/yourusername/dockify.git
-cd dockify
+git clone https://github.com/reimklim/DockerMonitor.git
+cd DockerMonitor
 ```
 
 2. Установите зависимости:
