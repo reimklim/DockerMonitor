@@ -1,6 +1,6 @@
-# Dockify - Docker Container Monitoring Application
+# ReimDockify - Docker Container Monitoring Application
 
-Dockify - это приложение для мониторинга контейнеров Docker с современным интерфейсом, вдохновленным Spotify.
+ReimDockify - это приложение для мониторинга контейнеров Docker с современным интерфейсом, вдохновленным Spotify.
 
 ## Особенности
 
